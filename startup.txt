@@ -1,0 +1,11 @@
+1. Установить все библиотеки из ноутбуков
+2. Установить cmake для установки dlib
+3. 
+При использовании keras-vggface ошибка No module named 'keras.engine.topology'
+В файле keras_vggface/models.py
+Заменить 
+from keras.engine.topology import get_source_inputs
+на 
+from keras.utils.layer_utils import get_source_inputs
+
+По необходимости установить keras-applications и keras-preprocessing
